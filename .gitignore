@@ -4,7 +4,6 @@ capybara-*.html
 /log
 /test
 /tmp
-public/uploads
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
