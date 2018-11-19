@@ -1,11 +1,9 @@
-<h2 class='add_place_header'>Add new place</h2>
-<%= simple_form_for(:place, url: places_path, html: { class: 'form-group' }) do |f|%>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.file_field :image_path %></br></br>
-  <%= f.submit 'Add place' %>
-<% end %>
-
+<%= link_to 'Add new place', new_place_path,  { remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content"></div>
+  </div>
+</div>
 
 <h3 class='add_place_header'>Uploaded places</h3>
 <div class='row images'>

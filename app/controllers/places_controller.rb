@@ -3,6 +3,13 @@ class PlacesController < ApplicationController
     @places = Place.all
   end
 
+  def new
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def create
     Place.create!(place_params)
     redirect_to root_path
