@@ -29,3 +29,8 @@ body{
   padding: 5px;
   border-bottom: 1px solid grey;
 }
+
+.area{
+  margin-left: 5%;
+  margin-right: 5%;
+}

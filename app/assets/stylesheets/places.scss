@@ -1,3 +1,50 @@
 // Place all the styles related to the places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.images.row {
+  padding: 5px;
+}
+
+.images.row img {
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 5px;
+  height: auto;
+  width: 96%;
+}
+
+.images .wrap{
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.wrap:hover  {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.wrap:hover a{
+  color: #ccc;
+}
+
+.images .col-md-3{
+  padding: 5px;
+}
+
+.title {
+  margin-left: 3%;
+  color: black;
+  font-size: 16px;
+}
+
+.description {
+  color: black;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.wrap:hover .description{
+  visibility: visible;
+}
