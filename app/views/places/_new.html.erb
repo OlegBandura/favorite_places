@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <button type="button" class="close btn btn-danger" data-dismiss="modal">x</button>
+</div>
+<div class="modal-body">
+  <%= simple_form_for(:place, url: places_path, html: { class: 'form-group' }) do |f|%>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.file_field :image_path %></br></br>
+    <div class="modal-footer">
+      <%= f.submit 'Add place', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
