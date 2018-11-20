@@ -15,8 +15,15 @@
         <p class='logo'>FavoritePlaces</p>
       </div>
       <div class='col col-lg-2'>
-        <button type="button" class="btn btn-danger">Registration</button>
-        <button type="button" class="btn btn-light">Sign In</button>
+        <% if current_user %>
+          <%= "Hello, #{current_user.email}" %>
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", "#sign_up", "data-toggle" => "modal", :class => 'btn btn-danger' %>
+          <%= link_to "Sign in", "#sign_in", "data-toggle" => "modal", :class => 'btn btn-light' %>
+          <%= render 'shared/sign_in' %>
+          <%= render 'shared/sign_up' %>
+        <% end %>
       </div>
     </div>
   <div class='body'>
