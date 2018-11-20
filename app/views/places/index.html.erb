@@ -1,9 +1,12 @@
-<%= link_to 'Add new place', new_place_path,  { remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+<% if current_user %>
+  <%= link_to 'Add new place', new_place_path, { remote: true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %>
+<% end %>
 <div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content"></div>
   </div>
 </div>
+</br>
 
 <h3 class='add_place_header'>Uploaded places</h3>
 <div class='row images'>
