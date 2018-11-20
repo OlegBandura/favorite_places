@@ -14,6 +14,13 @@
     <div class="col-md-3">
       <div class='wrap'>
         <%= image_tag(place.image_path.url, class: 'image', size: '400') if place.image_path? %>
+        <%= link_to like_place_path(place), method: :put do %>
+          💗 <%= place.get_upvotes.size %>
+        <% end %>
+
+        <%= link_to dislike_place_path(place), method: :put do %>
+          <span class='unlike'>💔 <%= place.get_downvotes.size %>
+        <% end %>
       <div class='title'><%= place.name %></div>
         <div class='description'><%= place.description %></div>
       </div>
